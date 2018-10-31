@@ -11,11 +11,7 @@
 option(json "Enable json support" ON)
 option(json-shared "Shared json" OFF)
 
-
-set(EXT_JSON_SOURCES
-  json.c utf8_to_utf16.c utf8_decode.c JSON_parser.c
-)
-
+file(GLOB_RECURSE EXT_JSON_SOURCES "*.c")
 
 #add_library(EXT_XML [STATIC | SHARED | MODULE] [EXCLUDE_FROM_ALL]
 add_library(EXT_JSON ${EXT_JSON_SOURCES})

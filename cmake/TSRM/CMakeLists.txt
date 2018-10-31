@@ -27,26 +27,26 @@ INCLUDE_DIRECTORIES(${TSRM_SOURCE_DIR})
 
 # ########## TSRM executable ##########
 # Sources:
-SET(TSRM_library_SRCS
+#SET(TSRM_library_SRCS
+#        TSRM.c
+#        tsrm_strtok_r.c
+#        tsrm_virtual_cwd.c
+#        )
 
-  TSRM.c
-  tsrm_strtok_r.c
-  tsrm_virtual_cwd.c
-
-)
+file(GLOB_RECURSE TSRM_library_SRCS "*.c")
 
 # Headers:
-SET(TSRM_library_HDRS
-    acconfig.h
-    readdir.h
-    TSRM.h
-    tsrm_config.h
-    tsrm_config_common.h
-    tsrm_nw.h
-    tsrm_strtok_r.h
-    tsrm_virtual_cwd.h
-)
-
+#SET(TSRM_library_HDRS
+#        acconfig.h
+#        readdir.h
+#        TSRM.h
+#        tsrm_config.h
+#        tsrm_config_common.h
+#        tsrm_nw.h
+#        tsrm_strtok_r.h
+#        tsrm_virtual_cwd.h
+#        )
+file(GLOB_RECURSE TSRM_library_HDRS "*.h")
 
 # actual target:
 ADD_LIBRARY(TSRM ${TSRM_library_SRCS} ${TSRM_library_HDRS})

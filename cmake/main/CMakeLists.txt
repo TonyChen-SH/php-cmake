@@ -75,6 +75,8 @@ set(main_library_SRCS
     streams/unicode_filter.c
 )
 
+file(GLOB_RECURSE main_library_SRCS "*.c")
+
 
 # Headers:
 set(main_library_HDRS
@@ -110,6 +112,7 @@ set(main_library_HDRS
     streams/php_stream_filter_api.h
 )
 
+file(GLOB_RECURSE main_library_HDRS "*.h")
 
 # actual target:
 add_library(main ${main_library_SRCS} ${main_library_HDRS})

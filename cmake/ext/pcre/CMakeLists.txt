@@ -18,13 +18,14 @@ option(pcre-shared "Shared pcre" OFF)
 ## Check if user provided --with-pcre-regex
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/pcrelib")
 
-set(PCRELIB_SOURCES pcrelib/pcre_chartables.c pcrelib/pcre_ucd.c 
+set(PCRELIB_SOURCES pcrelib/pcre_chartables.c pcrelib/pcre_ucd.c
 pcrelib/pcre_compile.c pcrelib/pcre_config.c pcrelib/pcre_exec.c
 pcrelib/pcre_fullinfo.c pcrelib/pcre_get.c pcrelib/pcre_globals.c
-pcrelib/pcre_info.c pcrelib/pcre_maketables.c pcrelib/pcre_newline.c
+pcrelib/pcre_maketables.c pcrelib/pcre_newline.c
 pcrelib/pcre_ord2utf8.c pcrelib/pcre_refcount.c pcrelib/pcre_study.c
-pcrelib/pcre_tables.c pcrelib/pcre_try_flipped.c pcrelib/pcre_valid_utf8.c
-pcrelib/pcre_version.c pcrelib/pcre_xclass.c)
+pcrelib/pcre_tables.c pcrelib/pcre_valid_utf8.c
+pcrelib/pcre_version.c pcrelib/pcre_xclass.c
+pcrelib/pcre_jit_compile.c)
 
 set(EXT_PCRE_SOURCES
   php_pcre.c
